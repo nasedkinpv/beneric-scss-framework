@@ -1,0 +1,15 @@
+{
+  "name": "beneric-scss-framework",
+  "version": "1.0.0",
+  "description": "package for rapid front-end development",
+  "main": "index.js",
+  "dependencies": {
+    "fibers": "^5.0.0",
+    "sass": "^1.38.2"
+  },
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
