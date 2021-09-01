@@ -16,7 +16,7 @@ var Fiber = require("fibers");
 var sass = require('sass'); // or require('node-sass');
 
 var result = sass.renderSync({
-    file: "input.scss", outputStyle: "expanded", sourceMap: true,
+    file: "index.scss", outputStyle: "expanded", sourceMap: true,
     outFile: "out.css"
 });
 console.log(sass.info);
