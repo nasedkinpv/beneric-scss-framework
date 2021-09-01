@@ -1,3 +1,13 @@
-@import 'modularscale-sass/_modularscale.scss';
-@import 'sass-flexbox/scss/main.scss';
-@import 'sass-mq/_mq.scss';
+/**
+ * Legacy
+ */
+
+@import "modularscale-sass/_modularscale.scss";
+@import "sass-flexbox/scss/main.scss";
+@import "sass-mq/_mq.scss";
+
+/**
+ * Utilities and mixins
+ */
+
+@import "utilities";
