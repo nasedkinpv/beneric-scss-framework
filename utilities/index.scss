@@ -8,7 +8,7 @@
 }
 @mixin fluid-aspect($ratio: 1 1, $selector: "> :first-child") {
   $selector: unquote($selector);
-  padding-bottom: percentage(nth($ratio, 2) / nth($ratio, 1));
+  padding-bottom: percentage(math.div(nth($ratio, 2), nth($ratio, 1)));
   position: relative;
 
   #{$selector} {
@@ -23,13 +23,7 @@
 // Font Face
 // =============================================================================
 
-@mixin font-face(
-  $name,
-  $path,
-  $weight: null,
-  $style: null,
-  $exts: eot woff2 woff ttf svg
-) {
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
   $src: null;
 
   $extmods: (
@@ -43,17 +37,9 @@
   );
 
   @each $ext in $exts {
-    $extmod: if(
-      map-has-key($extmods, $ext),
-      $ext + map-get($extmods, $ext),
-      $ext
-    );
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
     $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-    $src: append(
-      $src,
-      url(quote($path + "." + $extmod)) format(quote($format)),
-      comma
-    );
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
   }
 
   @font-face {

@@ -1,6 +1,6 @@
 {
   "name": "beneric-scss-framework",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "package for rapid front-end development",
   "main": "index.js",
   "dependencies": {

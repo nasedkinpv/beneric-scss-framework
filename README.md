@@ -8,8 +8,14 @@
 - [modularscale-sass](https://github.com/modularscale/modularscale-sass)
 - [sass-mq](https://github.com/sass-mq/sass-mq)
 
+## Testing
+Packages can be added to this framework, and tested with dart2js:
+
+    npm run test
+
 ## Information
 
+Packages updated to new dart guidelines
 Useful on rapid front-end development.
 Dont forget to postCSS, and vendor-plugin
 
