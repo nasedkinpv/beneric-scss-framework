@@ -1,7 +1,7 @@
 /**
  * Legacy
  */
-
+@use "sass:math";
 @import "modularscale-sass/_modularscale.scss";
 @import "sass-flexbox/scss/main.scss";
 @import "sass-mq/_mq.scss";
